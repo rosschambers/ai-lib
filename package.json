@@ -1,0 +1,27 @@
+{
+  "name": "ai-lib",
+  "version": "1.0.0",
+  "description": "AI productivity tools and sync utilities for VS Code and other platforms",
+  "scripts": {
+    "sync:chat-modes": "node scripts/sync-chat-modes.js",
+    "sync:instructions": "node scripts/sync-instructions.js",
+    "sync:all": "npm run sync:chat-modes && npm run sync:instructions",
+    "sync": "npm run sync:all"
+  },
+  "keywords": [
+    "vscode",
+    "copilot",
+    "chat-modes",
+    "instructions",
+    "cross-platform",
+    "hardlinks"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/ai-lib.git"
+  },
+  "license": "MIT"
+}

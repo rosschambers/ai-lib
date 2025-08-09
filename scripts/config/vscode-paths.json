@@ -1,0 +1,16 @@
+{
+  "platforms": {
+    "win32": {
+      "base_path": "%APPDATA%\\Code\\User",
+      "prompts_subdirectory": "prompts"
+    },
+    "darwin": {
+      "base_path": "$HOME/Library/Application Support/Code/User", 
+      "prompts_subdirectory": "prompts"
+    },
+    "linux": {
+      "base_path": "$HOME/.config/Code/User",
+      "prompts_subdirectory": "prompts"
+    }
+  }
+}
