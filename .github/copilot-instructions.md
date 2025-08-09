@@ -21,13 +21,6 @@ When making changes:
 - Check for broken links or outdated references
 - Remove orphaned or deprecated files
 
-### 4. ALWAYS Provide Improvement Suggestions
-Suggest better approaches for:
-- **Architecture**: More modular or maintainable approaches
-- **Generality**: Ways to make solutions more universally applicable
-- **Simplicity**: Opportunities to reduce complexity
-- **Future-Proofing**: Strategies to improve long-term maintainability
-
 ## Design Principles
 
 ### Platform Agnostic & Future-Proof
@@ -44,9 +37,17 @@ Suggest better approaches for:
 
 This repository supports AI assistance for **any type of work**: coding, documentation, research, planning, configuration, and creative tasks. Ensure all tools accommodate diverse content types and workflows.
 
+### Response Guidelines
+- Include source links when available from research or external content
+- Use proper link formatting for credibility and reference
+
 ### Quality Checklist
 Before completing any task ensure a high level of quality by checking the solution against the following:
 - Solution is generic and reusable
 - Related files are updated and consistent
 - At least one improvement suggestion provided
 - Language is concise and clear
+
+## Sync Task Automation
+
+After adding new instructions, chat-modes, or MCP servers to the project, always run the "Sync: All" task to ensure all changes are properly integrated. This keeps documentation, configuration, and examples up to date across the repository.

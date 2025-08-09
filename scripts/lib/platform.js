@@ -43,6 +43,18 @@ class Platform {
     }
 
     /**
+     * Get the VS Code user directory on current platform
+     */
+    getVSCodeUserDirectory() {
+        const platformConfig = this.config.platforms[this.platform];
+        if (!platformConfig) {
+            throw new Error(`Unsupported platform: ${this.platform}`);
+        }
+
+        return this.expandEnvironmentVariables(platformConfig.base_path);
+    }
+
+    /**
      * Get the target directory for VS Code prompts on current platform
      */
     getVSCodePromptsDirectory() {

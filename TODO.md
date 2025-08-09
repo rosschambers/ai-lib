@@ -2,50 +2,6 @@
 
 ## 🎯 Personal AI Preferences
 
-### Default Tool Integration
-**Goal:** Install generic user preferences that always include sequential thinking and memory tools
-
-**Implementation Approaches:**
-- [ ] **Global User Preferences Template**
-  - Create generic `~/.ai-preferences/global-settings.json` template
-  - One-way sync from repo to user directory with default tool preferences
-  - Template includes sequential thinking and memory as always-enabled tools
-  - User can extend but not modify the synced base preferences
-
-- [ ] **Platform Integration Scripts**
-  - Install scripts that configure each AI platform to use global preferences
-  - VS Code: modify global settings.json to include default tools
-  - Browser extensions: configure to inject standard preferences
-  - Generic configuration that works across platforms without project dependencies
-
-- [ ] **Universal AI Preference Format**
-  - Standard JSON/YAML format for AI tool preferences
-  - One-way sync from this repo to user's global AI config directory
-  - Platform adapters that read generic format and apply to specific tools
-  - Base preferences (sequential thinking + memory) with user extension points
-
-### Memory System Integration
-**Goal:** Persistent memory across AI conversations and sessions
-
-**Implementation Approaches:**
-- [ ] **Local Knowledge Graph**
-  - SQLite-based personal knowledge store
-  - Automatic extraction of important context from conversations
-  - Semantic search across conversation history
-  - Privacy-first approach (all data stored locally)
-
-- [ ] **GitHub-Based Memory**
-  - Use GitHub Issues/Discussions as structured memory storage
-  - Automated tagging and categorization of memories
-  - Cross-reference with code repositories and projects
-  - Search and retrieval via GitHub's API
-
-- [ ] **MCP Memory Server**
-  - Implement Model Context Protocol server for persistent memory
-  - Integration with various AI platforms through MCP
-  - Shareable memory contexts between team members
-  - Advanced querying and relationship mapping
-
 ## 🔧 Claude Integration
 
 ### Instruction Synchronization
@@ -112,14 +68,6 @@
 4. **Phase 4**: Team collaboration features and shared instruction libraries
 
 ## 🚀 Repository Enhancements
-
-### Tool Expansion
-- [ ] **MCP Server Collection**
-  - Memory
-  - sequential thoughts
-  - notify me
-  - firecrawl
-  - others?
 
 ## 🌐 Community & Ecosystem
 

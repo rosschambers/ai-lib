@@ -1,0 +1,79 @@
+{
+	"servers": {
+		"notify-me": {
+			"command": "npx",
+			"args": [
+				"ntfy-me-mcp"
+			],
+			"env": {
+				"NTFY_TOPIC": "${input:ntfy_topic}"
+			},
+			"type": "stdio"
+		},
+		"sequentialthinking": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-sequential-thinking@latest"
+			],
+			"gallery": true
+		},
+		"basic-memory": {
+			"type": "stdio",
+			"command": "uvx",
+			"args": [
+				"basic-memory",
+				"mcp"
+			]
+		},
+		"firecrawl": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"firecrawl-mcp@latest"
+			],
+			"env": {
+				"FIRECRAWL_API_KEY": "${input:firecrawl_api_key}"
+			},
+			"gallery": true
+		},
+		"brave-search": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-brave-search"
+			],
+			"env": {
+				"BRAVE_API_KEY": "${input:brave_api_key}"
+			}
+		}
+	},
+	"inputs": [
+		{
+			"id": "memory_file_path",
+			"type": "promptString",
+			"description": "Path to the memory storage file",
+			"password": false
+		},
+		{
+			"id": "firecrawl_api_key",
+			"type": "promptString",
+			"description": "Firecrawl API Key (get from https://www.firecrawl.dev/app/api-keys)",
+			"password": true
+		},
+		{
+			"id": "ntfy_topic",
+			"type": "promptString",
+			"description": "Ntfy topic to use for notifications",
+			"password": true
+		},
+		{
+			"id": "brave_api_key",
+			"type": "promptString",
+			"description": "Brave Search API Key (get from https://search.brave.com/settings/api)",
+			"password": true
+		}
+	]
+}

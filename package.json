@@ -5,7 +5,8 @@
   "scripts": {
     "sync:chat-modes": "node scripts/sync-chat-modes.js",
     "sync:instructions": "node scripts/sync-instructions.js",
-    "sync:all": "npm run sync:chat-modes && npm run sync:instructions",
+    "sync:mcp": "node scripts/sync-mcp.js",
+    "sync:all": "npm run sync:chat-modes && npm run sync:instructions && npm run sync:mcp",
     "sync": "npm run sync:all"
   },
   "keywords": [
@@ -13,6 +14,8 @@
     "copilot",
     "chat-modes",
     "instructions",
+    "mcp",
+    "model-context-protocol",
     "cross-platform",
     "hardlinks"
   ],

@@ -23,6 +23,12 @@ Generic AI instruction sets located in `instructions/`:
 - **`personal-info.instructions.md`** - Guidelines for AI tools to handle personal information with memory integration
 - **`task-planning.instructions.md`** - Instructions for structured task breakdown and planning workflows
 
+### MCP Configuration
+
+Model Context Protocol server configuration located in `mcp/`:
+
+- **`mcp.json`** - MCP server configurations for GitHub Copilot integration including basic-memory, firecrawl, brave-search, and ntfy notifications
+
 ### Sync Library
 
 Reusable utilities in `scripts/lib/`:
@@ -51,7 +57,7 @@ Reusable utilities in `scripts/lib/`:
    ```bash
    npm run sync
    ```
-   This automatically syncs both chat modes and custom instructions to your VS Code user directory using hard links.
+   This automatically syncs chat modes, custom instructions, and MCP configuration to your VS Code user directory using hard links.
    
    **Individual sync options:**
    ```bash
@@ -60,6 +66,9 @@ Reusable utilities in `scripts/lib/`:
    
    # Sync only custom instructions  
    npm run sync:instructions
+   
+   # Sync only MCP configuration
+   npm run sync:mcp
    ```
 
 ### Adding New AI Tools
@@ -67,6 +76,7 @@ Reusable utilities in `scripts/lib/`:
 1. **Create new files** in the appropriate directory:
    - Chat modes: `chat-modes/your-mode.chatmode.md`
    - Instructions: `instructions/your-instructions.instructions.md`
+   - MCP servers: Add to `mcp/mcp.json`
 2. **Run the sync script** to synchronize:
    ```bash
    npm run sync
@@ -113,6 +123,18 @@ The synced instruction files enhance AI interactions across all VS Code workspac
 - **Task Planning** - Structures complex work into manageable steps
 
 These instructions work automatically once synced and apply to all AI interactions in VS Code.
+
+### MCP Configuration
+
+The synced MCP configuration provides powerful tool integration:
+
+#### Available MCP Servers
+- **Basic Memory** - Persistent memory and note-taking capabilities
+- **Firecrawl** - Web scraping and content extraction tools
+- **Brave Search** - Web search integration
+- **Ntfy Notifications** - Push notification capabilities
+
+Once synced, these MCP servers are available in all VS Code workspaces with GitHub Copilot agent mode. Use **MCP: Show Installed Servers** to view and manage them.
 
 ### Sync Strategy
 

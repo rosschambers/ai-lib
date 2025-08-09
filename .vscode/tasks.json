@@ -1,0 +1,49 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Sync: All",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"sync"
+			],
+			"group": "build",
+			"isBackground": false
+		},
+		{
+			"label": "Sync: Chat Modes",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"sync:chat-modes"
+			],
+			"group": "build",
+			"isBackground": false
+		},
+		{
+			"label": "Sync: Instructions",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"sync:instructions"
+			],
+			"group": "build",
+			"isBackground": false
+		},
+		{
+			"label": "Sync: MCP",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"sync:mcp"
+			],
+			"group": "build",
+			"isBackground": false
+		}
+	]
+}
